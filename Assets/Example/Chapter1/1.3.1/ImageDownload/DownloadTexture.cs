@@ -17,7 +17,7 @@ namespace Samples.Section1
         // Start is called before the first frame update
         void Start()
         {
-            var uri = "https://magical-iga-blog-album232241-dev.s3.ap-northeast-1.amazonaws.com/public/magicaligaBlog.png";
+            var uri = "https://amagical-iga-blog-album232241-dev.s3.ap-northeast-1.amazonaws.com/public/magicaligaBlog.png";
 
             //テクスチャを取得する
             //ただし例外発生時は合計3回まで試行する
