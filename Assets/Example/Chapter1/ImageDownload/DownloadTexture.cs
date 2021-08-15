@@ -20,7 +20,7 @@ namespace Samples.Section1
             var uri = "https://magical-iga-blog-album232241-dev.s3.ap-northeast-1.amazonaws.com/public/magicaligaBlog.png";
 
             //テクスチャを取得する
-            //ただし例外発生時は系3回まで試行する
+            //ただし例外発生時は合計3回まで試行する
 
             GetTextureAsync(uri)
                 .OnErrorRetry(
