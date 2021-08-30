@@ -204,6 +204,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1341557329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1341557331}
+  - component: {fileID: 1341557330}
+  m_Layer: 0
+  m_Name: countdown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1341557330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341557329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c45a9324b528bd74ea22f92db53dfd62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _countSeconds: 10
+--- !u!4 &1341557331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341557329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 51.35603, y: 53.55232, z: 13.303118}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1572649592
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,27 +258,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1572649595}
   - component: {fileID: 1572649594}
-  - component: {fileID: 1572649593}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: observer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1572649593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572649592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c45a9324b528bd74ea22f92db53dfd62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _countSeconds: 10
 --- !u!114 &1572649594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b647e7272b2419749a500e732147d27b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _countDownEventProvider: {fileID: 1572649593}
+  _countDownEventProvider: {fileID: 1341557330}
 --- !u!4 &1572649595
 Transform:
   m_ObjectHideFlags: 0

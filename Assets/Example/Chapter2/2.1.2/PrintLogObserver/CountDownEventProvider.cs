@@ -16,6 +16,17 @@ namespace Samples.Section2.MyObservers
         //SubjectのIObservableインターフェースの部分のみ公開する
         public IObservable<int> CountDownObservable => _subject;
 
+        //上記の事は以下と同様
+        //private IObservable<int> ob;
+        //  public IObservable<int> CountDownObservable {
+        //    get => _subject;
+        //    set => ob = value;
+        //  }
+        //public IObservable<int> CountDownObservable {
+        //    get { return _subject; }
+        //    set { ob = value;  }
+        //}
+
         private void Awake()
         {
             //Subject生成
