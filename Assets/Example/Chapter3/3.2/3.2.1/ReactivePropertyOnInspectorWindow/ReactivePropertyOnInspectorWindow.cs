@@ -28,6 +28,7 @@ namespace Samples.Section3.ReactiveProperty
         public QuaternionReactiveProperty P;
 
         public MagicalReactiveProperty Q;
+        public FruitReactiveProperty R;
     }
 
     [Serializable]
