@@ -14,7 +14,6 @@ namespace Samples.Section3.Coroutines
         void Start()
         {
             StartCoroutine(MoveCoroutine());
-
         }
 
         //uGUIのButtonが押されたら1秒間オブジェクトを前進させるコルーチン
