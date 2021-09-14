@@ -1,18 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using UniRx;
 using UnityEngine;
 
-public class CatchIgnoreSample2 : MonoBehaviour
+namespace Samples.Section4.ErrorHandlers
 {
-    // Start is called before the first frame update
-    void Start()
+    public class CatchIgnoreSample2 : MonoBehaviour
     {
-        
-    }
+        private void Start()
+        {
+            var array = new[] { "1", "2", "three", "4" };
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            array.ToObservable()
+                .Select(int.Parse) // 文字列からint型に変換する
+                .CatchIgnore() // 例外を処理せずにOnCompletedに変換する
+                .Subscribe(
+                    x => Debug.Log(x),
+                    ex => Debug.LogError(ex),
+                    () => Debug.Log("OnCompleted"));
+        }
     }
 }
