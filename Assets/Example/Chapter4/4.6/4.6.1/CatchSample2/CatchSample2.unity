@@ -233,6 +233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16feafd99e31cb941b2808af7bc55066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _serverUrls:
+  - https://magical-iga.com/
 --- !u!4 &1141903884
 Transform:
   m_ObjectHideFlags: 0
