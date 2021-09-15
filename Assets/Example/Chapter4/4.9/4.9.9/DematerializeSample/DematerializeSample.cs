@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UniRx;
 using UnityEngine;
 
-public class DematerializeSample : MonoBehaviour
+namespace Samples.Section4.Others
 {
-    // Start is called before the first frame update
-    void Start()
+    public class DematerializeSample : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Start()
+        {
+            Observable.Range(0, 3)
+                .Materialize()
+                .Dematerialize()
+                .Subscribe(x => Debug.Log(x));
+        }
     }
 }
